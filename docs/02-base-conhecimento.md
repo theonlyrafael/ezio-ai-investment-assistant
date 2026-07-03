@@ -29,7 +29,60 @@ Os arquivos JSON e CSV são carregados na memória pelo back-end em Python (util
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
 
-[Sua descrição aqui]
+Os dados são consultados dinamicamente para evitar o desperdício de tokens e respeitar a janela de contexto. Quando o usuário faz uma pergunta, o back-end filtra as tabelas e arquivos locais, extrai apenas as linhas pertinentes ao cenário e injeta esse bloco como uma mensagem de contexto (`system` ou `user`) antes de chamar a API de completude.
+
+Abaixo está o exemplo de código que ilustra essa abordagem de integração:
+
+```python
+import json
+import pandas as pd
+from openai import OpenAI
+
+def gerar_resposta_ezio(id_cliente, pergunta_usuario):
+    # 1. Carrega os dados locais da base de conhecimento
+    with open('data/perfil_investidor.json', 'r') as f:
+        perfis = json.load(f)
+    with open('data/produtos_financeiros.json', 'r') as f:
+        produtos = json.load(f)
+        
+    # Encontra o perfil do cliente específico
+    perfil_cliente = next(p for p in perfis if p["id"] == id_cliente)
+    
+    # 2. Aplica a regra de negócio: Filtra produtos adequados ao perfil
+    risco_permitido = perfil_cliente["perfil_risco"] # Ex: "Moderado"
+    produtos_recomendados = [
+        p for p in produtos 
+        if p["nivel_risco"] == risco_permitido or p["nivel_risco"] == "Baixo"
+    ]
+    
+    # 3. Monta dinamicamente a string de contexto
+    contexto_prompt = f"""
+    CONTEXTO DO CLIENTE:
+    - Nome: {perfil_cliente['nome']}
+    - Perfil de Risco: {risco_permitido}
+    
+    PRODUTOS DISPONÍVEIS PARA RECOMENDAÇÃO:
+    {json.dumps(produtos_recomendados, indent=2, ensure_ascii=False)}
+    """
+    
+    # 4. Envia o contexto estruturado para a API da OpenAI
+    client = OpenAI(api_key="SUA_API_KEY")
+    response = client.chat.completions.create(
+        model="gpt-4o",
+        messages=[
+            {
+                "role": "system", 
+                "content": "Você é o Ezio, um assistente virtual de investimentos educativo e consultivo. Responda à dúvida do usuário baseando-se estritamente no contexto fornecido. Se a resposta não puder ser derivada do contexto ou se o cliente não tiver perfil mapeado, informe que não possui os dados e decline educadamente de alucinar."
+            },
+            {
+                "role": "user", 
+                "content": f"{contexto_prompt}\n\nPergunta do usuário: {pergunta_usuario}"
+            }
+        ]
+    )
+    
+    return response.choices[0].message.content
+```
 
 ---
 
