@@ -15,7 +15,7 @@
 
 > Você modificou ou expandiu os dados mockados? Descreva aqui.
 
-[Sua descrição aqui]
+Optei por não utilizar datasets genéricos do Hugging Face para manter o controle da persona e focar exclusivamente na realidade do mercado brasileiro. Em vez disso, expandi os dados mockados utilizando scripts em Python (com bibliotecas como `Faker` e `Pandas`) para gerar um volume robusto de registros sintéticos. O catálogo de `produtos_financeiros.json` foi enriquecido com ativos reais e práticos, como variações de títulos do Tesouro Direto, contas com rendimento diário atrelado ao CDI, CDBs e algumas opções de renda variável. O `perfil_investidor.json` e os históricos de transações foram escalados para simular múltiplos cenários de clientes com diferentes capacidades de aporte.
 
 ---
 
