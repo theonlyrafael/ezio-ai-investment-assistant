@@ -15,7 +15,7 @@ O agente atua de forma proativa analisando o contexto financeiro e o apetite de 
 ### Público-Alvo
 > Quem vai usar esse agente?
 
-[Sua descrição aqui]
+Pessoas interessadas em investimentos em diferentes estágios de maturidade financeira: desde iniciantes que querem dar os primeiros passos e entender o básico, até veteranos que buscam um assistente rápido para validar lógicas de diversificação de portfólio.
 
 ---
 
