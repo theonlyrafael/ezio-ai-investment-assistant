@@ -10,7 +10,7 @@ A falta de clareza, personalização e direcionamento prático na hora de invest
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
 
-[Sua descrição aqui]
+O agente atua de forma proativa analisando o contexto financeiro e o apetite de risco do usuário antes de qualquer recomendação. Em vez de apenas responder dúvidas isoladas, ele estrutura um plano educativo, sugerindo comparações entre ativos, explicando os conceitos por trás de cada sugestão e guiando o usuário passo a passo na montagem ou diversificação de sua carteira.
 
 ### Público-Alvo
 > Quem vai usar esse agente?
