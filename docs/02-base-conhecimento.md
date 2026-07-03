@@ -9,9 +9,6 @@
 | `produtos_financeiros.json` | JSON | Sugerir produtos adequados ao perfil mapeado do usuário |
 | `transacoes.csv` | CSV | Analisar o padrão de fluxo de caixa e capacidade de aporte do cliente |
 
-> [!TIP]
-> **Quer um dataset mais robusto?** Você pode utilizar datasets públicos do [Hugging Face](https://huggingface.co/datasets) relacionados a finanças, desde que sejam adequados ao contexto do desafio.
-
 ---
 
 ## Adaptações nos Dados
