@@ -24,7 +24,7 @@ Optei por não utilizar datasets genéricos do Hugging Face para manter o contro
 ### Como os dados são carregados?
 > Descreva como seu agente acessa a base de conhecimento.
 
-[ex: Os JSON/CSV são carregados no início da sessão e incluídos no contexto do prompt]
+Os arquivos JSON e CSV são carregados na memória pelo back-end em Python (utilizando `Pandas` e a biblioteca nativa `json`) logo na inicialização da aplicação no Streamlit, funcionando como um banco de dados em memória local e rápido para a sessão.
 
 ### Como os dados são usados no prompt?
 > Os dados vão no system prompt? São consultados dinamicamente?
