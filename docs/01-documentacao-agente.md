@@ -5,7 +5,7 @@
 ### Problema
 > Qual problema financeiro seu agente resolve?
 
-[Sua descrição aqui]
+A falta de clareza, personalização e direcionamento prático na hora de investir. Muitas pessoas, desde iniciantes até investidores mais veteranos, sentem dificuldade em cruzar seus objetivos financeiros com as opções disponíveis no mercado, necessitando de uma consultoria que não apenas indique, mas explique o raciocínio por trás da escolha.
 
 ### Solução
 > Como o agente resolve esse problema de forma proativa?
