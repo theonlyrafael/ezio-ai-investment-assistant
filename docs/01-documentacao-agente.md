@@ -53,12 +53,16 @@ Informal e acessível. Ele evita o "economês" complicado sempre que possível. 
 
 ```mermaid
 flowchart TD
-    A[Cliente] -->|Mensagem| B[Interface]
-    B --> C[LLM]
-    C --> D[Base de Conhecimento]
-    D --> C
-    C --> E[Validação]
-    E --> F[Resposta]
+    A[Cliente] -->|Mensagem| B[Interface Streamlit]
+    B --> C{Análise de Perfil}
+    C -->|Perfil Identificado| D[LLM]
+    C -->|Sem Perfil| G[Solicita Dados Básicos]
+    G --> B
+    D --> E[Base de Conhecimento / Produtos]
+    E --> D
+    D --> F[Validação Anti-Alucinação]
+    F --> H[Resposta]
+    H --> B
 ```
 
 ### Componentes
