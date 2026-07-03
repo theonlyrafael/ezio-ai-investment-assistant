@@ -22,7 +22,7 @@ Pessoas interessadas em investimentos em diferentes estágios de maturidade fina
 ## Persona e Tom de Voz
 
 ### Nome do Agente
-[Nome escolhido]
+Ezio
 
 ### Personalidade
 > Como o agente se comporta? (ex: consultivo, direto, educativo)
