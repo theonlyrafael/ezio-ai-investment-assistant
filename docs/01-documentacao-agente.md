@@ -87,4 +87,7 @@ flowchart TD
 ### Limitações Declaradas
 > O que o agente NÃO faz?
 
-[Liste aqui as limitações explícitas do agente]
+- O agente **não executa transações reais** de compra, venda ou transferência de valores.
+- O agente **não garante rentabilidade futura** ou promessas de lucros fixos em ativos de renda variável.
+- O agente **não atua como contador**, sendo incapaz de realizar declarações de imposto de renda ou emitir conselhos legais e tributários oficiais.
+- O agente **não recomenda ativos de alto risco** para usuários não mapeados ou classificados com perfil conservador.
