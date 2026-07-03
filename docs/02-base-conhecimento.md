@@ -92,12 +92,19 @@ def gerar_resposta_ezio(id_cliente, pergunta_usuario):
 
 ```
 Dados do Cliente:
-- Nome: João Silva
+- Nome: Donatello
 - Perfil: Moderado
-- Saldo disponível: R$ 5.000
+- Saldo disponível para investimento: R$ 5.000,00
+
+Produtos pré-selecionados para o perfil:
+- Tesouro IPCA+ 2029 (Renda Fixa, Risco Baixo)
+- Conta Digital 100% CDI (Renda Fixa, Risco Baixo, Liquidez Diária)
+- Fundo Imobiliário XPML11 (Renda Variável, Risco Moderado)
 
 Últimas transações:
-- 01/11: Supermercado - R$ 450
-- 03/11: Streaming - R$ 55
-...
+- 01/07: Pagamento Fatura - R$ 1.200,00
+- 02/07: Aporte Tesouro Direto - R$ 500,00
+
+Último atendimento:
+- 10/06: Cliente perguntou sobre a diferença de rentabilidade entre poupança e CDI.
 ```
