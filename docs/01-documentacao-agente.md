@@ -69,10 +69,10 @@ flowchart TD
 
 | Componente | Descrição |
 |------------|-----------|
-| Interface | [ex: Chatbot em Streamlit] |
-| LLM | [ex: GPT-4 via API] |
-| Base de Conhecimento | [ex: JSON/CSV com dados do cliente] |
-| Validação | [ex: Checagem de alucinações] |
+| Interface | Streamlit (responsável por renderizar a tela de chat interativa em Python). |
+| LLM | API da OpenAI (GPT) responsável pelo motor cognitivo e processamento de linguagem natural. |
+| Base de Conhecimento | Arquivos locais em JSON/CSV contendo o portfólio de produtos financeiros, histórico e perfil do usuário. |
+| Orquestração e Validação | Lógica no código em Python para checagem de regras de negócio (ex: garantir que a IA não recomende fora do perfil) e formatação de prompts. |
 
 ---
 
