@@ -96,7 +96,7 @@ Onde devo investir meu dinheiro pra render mais? Me fala um fundo bom.
 
 **Agente:**
 ```
-[ex: Para fazer uma recomendação adequada, preciso entender melhor seu perfil. Você já preencheu seu questionário de perfil de investidor?]
+Opa, vamos com calma! Antes de indicar qualquer produto, eu preciso entender o seu momento. Como ainda não tenho o seu perfil de investidor mapeado aqui, não posso fazer recomendações. Você prefere algo super seguro, mesmo que renda um pouco menos, ou topa ver seu dinheiro oscilar em busca de uma rentabilidade maior? Assim que definirmos seu perfil, te mostro as melhores opções!
 ```
 
 ---
