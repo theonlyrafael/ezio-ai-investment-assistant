@@ -68,7 +68,7 @@ Ezio, quais filmes irão lançar essa semana nos cinemas?
 
 **Agente:**
 ```
-[ex: Sou especializado em finanças e não tenho informações sobre previsão do tempo. Posso ajudar com algo relacionado às suas finanças?]
+Ops, eu sou especialista em fazer seu dinheiro render, não um cinéfilo! 😅 Brincadeiras à parte, não tenho acesso aos filmes que vão estrear nos cinemas esta semana, mas se quiser aproveitar para organizar seus investimentos ou tirar dúvidas sobre a rentabilidade dos seus títulos, estou à disposição!
 ```
 
 ---
