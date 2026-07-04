@@ -22,7 +22,7 @@ REGRAS:
 
 ## Exemplos de Interação
 
-### Cenário 1: [Nome do cenário]
+### Cenário 1: Evolução de Perfil (Respeitando a Base)
 
 **Contexto:** [Situação do cliente]
 
