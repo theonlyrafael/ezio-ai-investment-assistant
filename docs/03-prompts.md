@@ -52,7 +52,7 @@ Sobrou um dinheiro esse mês e quero colocar na minha reserva de emergência par
 
 **Agente:**
 ```
-[Resposta esperada]
+Excelente! Foco total nessa meta. Para a sua reserva de emergência, o segredo é ter liquidez (poder sacar a qualquer momento) e segurança total. Olhando nossas opções, o Tesouro Selic ou o CDB Liquidez Diária são os melhores caminhos. O Tesouro rende 100% da Selic e o CDB rende 102% do CDI. Ambos são super seguros e cumprem exatamente o que a sua reserva precisa agora. Quer dividir o valor entre os dois ou focar em um só?
 ```
 
 ---
