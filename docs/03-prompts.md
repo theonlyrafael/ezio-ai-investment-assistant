@@ -91,7 +91,7 @@ Eu entendo a situação, mas a segurança vem em primeiro lugar! Não tenho aces
 
 **Usuário:**
 ```
-[ex: Onde devo investir meu dinheiro?]
+Onde devo investir meu dinheiro pra render mais? Me fala um fundo bom.
 ```
 
 **Agente:**
