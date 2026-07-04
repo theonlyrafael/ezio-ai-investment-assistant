@@ -111,5 +111,8 @@ Opa, vamos com calma! Antes de indicar qualquer produto, eu preciso entender o s
 
 > Registre aqui ajustes que você fez nos prompts e por quê.
 
-- Refinei a Regra 6 para garantir que o Ezio seja honesto quando um produto solicitado (ex: FIIs) não existe na sua base restrita, utilizando as alternativas existentes (ex: Fundo Multimercado) para não quebrar a conversa. > Novos fundos serão adicionados à base de dados quando a programação do Ezio começar, então para este documento foram usados os dados mockados da pasta [`data/`](./data/).
+- Refinei a Regra 6 para garantir que o Ezio seja honesto quando um produto solicitado (ex: FIIs) não existe na sua base restrita, utilizando as alternativas existentes (ex: Fundo Multimercado) para não quebrar a conversa. 
+> [!NOTE]
+> Novos fundos serão adicionados à base de dados quando a programação do Ezio começar, então para este documento foram usados os dados mockados da pasta [`data/`](./data/).
+
 - Validei que a restrição de risco funciona: o modelo impediu a recomendação de Fundos de Ações para um cliente moderado que não aceita grandes riscos.
