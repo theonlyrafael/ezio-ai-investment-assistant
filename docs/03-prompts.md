@@ -63,7 +63,7 @@ Excelente! Foco total nessa meta. Para a sua reserva de emergência, o segredo �
 
 **Usuário:**
 ```
-[ex: Qual a previsão do tempo para amanhã?]
+Ezio, quais filmes irão lançar essa semana nos cinemas?
 ```
 
 **Agente:**
