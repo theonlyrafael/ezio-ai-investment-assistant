@@ -94,7 +94,7 @@ def gerar_resposta_ezio(id_cliente, pergunta_usuario):
 Dados do Cliente:
 - Nome: Donatello
 - Perfil: Moderado
-- Saldo disponível para investimento: R$ 5.000,00
+- Saldo disponível para investimento: R$ 6.100,00
 
 Produtos pré-selecionados para o perfil:
 - Tesouro IPCA+ 2029 (Renda Fixa, Risco Baixo)
@@ -102,8 +102,8 @@ Produtos pré-selecionados para o perfil:
 - Fundo Imobiliário XPML11 (Renda Variável, Risco Moderado)
 
 Últimas transações:
-- 01/07: Pagamento Fatura - R$ 1.200,00
-- 02/07: Aporte Tesouro Direto - R$ 500,00
+- 01/07: Pagamento Fatura - R$ 1.300,00
+- 02/07: Aporte Tesouro Direto - R$ 610,00
 
 Último atendimento:
 - 10/06: Cliente perguntou sobre a diferença de rentabilidade entre poupança e CDI.
