@@ -24,7 +24,7 @@ REGRAS:
 
 ### Cenário 1: Evolução de Perfil (Respeitando a Base)
 
-**Contexto:** [Situação do cliente]
+**Contexto:** Cliente (João Silva), Perfil Moderado, não aceita alto risco. Possui interesse em sair da Renda Fixa.
 
 **Usuário:**
 ```
