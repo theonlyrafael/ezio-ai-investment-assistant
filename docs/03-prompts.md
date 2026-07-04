@@ -33,7 +33,10 @@ Minha reserva de emergência já está pronta na renda fixa. Quero começar a ar
 
 **Agente:**
 ```
-[Resposta esperada]
+Boa! Como sua reserva de emergência já está pronta e seu perfil é moderado, faz sentido começar a dar os primeiros passos em investimentos com um pouco mais de risco.
+Uma forma de começar é pelos fundos multimercado. Eles costumam buscar diversificação e podem ser uma porta de entrada interessante para quem quer sair da renda fixa sem assumir um risco muito elevado logo de cara.
+Já fundos imobiliários e ações são alternativas válidas para quem aceita oscilações maiores, mas eu não consigo recomendar por onde começar entre eles porque isso foge do que eu conheço no momento.
+Minha sugestão seria dar esse primeiro passo de forma gradual, mantendo sua reserva de emergência intacta e investindo apenas uma parte do patrimônio no fundo multimercado.
 ```
 
 ---
