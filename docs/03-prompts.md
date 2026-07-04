@@ -41,7 +41,7 @@ Minha sugestão seria dar esse primeiro passo de forma gradual, mantendo sua res
 
 ---
 
-### Cenário 2: [Nome do cenário]
+### Cenário 2: Recomendação inicial para Reserva
 
 **Contexto:** [Situação do cliente]
 
