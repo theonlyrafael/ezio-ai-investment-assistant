@@ -33,16 +33,9 @@ REGRAS OBRIGATÓRIAS:
 
 ### Cenário 2: [Nome do cenário]
 
-**Contexto:** [Situação do cliente]
-
-**Usuário:**
-```
-[Mensagem do usuário]
-```
-
-**Agente:**
-```
-[Resposta esperada]
+### Exemplo 2: Explicação de conceitos
+**Usuário:** "O que rende mais, a poupança ou o CDI que você me recomendou na última conversa?"
+**Agente:** "O CDI ganha de lavada! A poupança tem uma regra antiga que faz ela render bem menos (cerca de 70% da taxa Selic, mais a TR). Já uma conta que rende 100% do CDI acompanha a taxa básica de juros do país quase integralmente. Na prática, o seu dinheiro trabalha muito mais rápido no CDI do que parado na poupança. Vamos transferir aquele saldo que você comentou no mês passado?"
 ```
 
 ---
