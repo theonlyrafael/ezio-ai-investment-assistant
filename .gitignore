@@ -1,0 +1,15 @@
+# Variáveis de ambiente (Cofre das senhas)
+.env
+
+# Ambientes virtuais Python
+venv/
+env/
+.venv/
+
+# Arquivos temporários do Python
+__pycache__/
+*.pyc
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
