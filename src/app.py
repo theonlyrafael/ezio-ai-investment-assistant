@@ -30,7 +30,8 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"], avatar=avatar_icon):
         st.markdown(message["content"])
 
-# 5. Captura da entrada do usuário e processamento da resposta
+# 5. Barra de entrada de texto para o usuário digitar sua dúvida financeira
+# se o usuário digitar algo e confirmar com Enter, o bloco abaixo eh executado
 if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
 
 
