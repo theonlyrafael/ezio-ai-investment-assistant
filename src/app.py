@@ -37,6 +37,13 @@ if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
     # A. Exibe a pergunta do usuário na tela e salva na memória
     st.chat_message("user", avatar="👤").markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
-    
-    # B. Mostra um indicador visual de carregamento enquanto o Ezio "pensa"
+
+    # B. Mostra um indicador visual de carregamento enquanto o Ezio pensa na resposta
     with st.spinner("Analisando seu perfil e o mercado..."):
+
+        # C. Chama a nossa função do agente.py, passando a pergunta e o histórico
+        # feito o filtro das mensagens de boas-vindas do Streamlit para focar só na conversa
+        historico_para_api = [
+            {"role": m["role"], "content": m["content"]}
+            for m in st.session_state.messages[:-1]
+        ]
