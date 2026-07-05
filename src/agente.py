@@ -35,3 +35,5 @@ def carregar_base_conhecimento():
     except Exception as e:
         print(f"Erro ao carregar os arquivos de dados: {e}")
         return {}, [], [], []
+
+def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
