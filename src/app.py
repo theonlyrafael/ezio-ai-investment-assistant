@@ -47,4 +47,6 @@ if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
             {"role": m["role"], "content": m["content"]}
             for m in st.session_state.messages[:-1]
         ]
-        resposta_ezio = responder_com_ezio(pergunta_usuario=prompt, historico_conversa_streamlit=historico_para_api)
+        resposta_ezio = responder_com_ezio(
+            pergunta_usuario=prompt, historico_conversa_streamlit=historico_para_api
+        )
