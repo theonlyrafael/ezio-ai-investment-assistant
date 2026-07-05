@@ -50,3 +50,9 @@ if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
         resposta_ezio = responder_com_ezio(
             pergunta_usuario=prompt, historico_conversa_streamlit=historico_para_api
         )
+
+    # D. Exibe a resposta do Ezio na tela e salva na memória
+    with st.chat_message("assistant", avatar="🏦"):
+        st.markdown(resposta_ezio)
+
+    st.session_state.messages.append({"role": "assistant", "content": resposta_ezio})
