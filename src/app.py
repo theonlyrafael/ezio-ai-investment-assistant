@@ -29,3 +29,11 @@ for message in st.session_state.messages:
     avatar_icon = "👤" if message["role"] == "user" else "🏦"
     with st.chat_message(message["role"], avatar=avatar_icon):
         st.markdown(message["content"])
+
+# 5. Captura da entrada do usuário e processamento da resposta
+if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
+
+
+
+        
+        
