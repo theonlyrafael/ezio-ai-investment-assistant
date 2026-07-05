@@ -36,11 +36,12 @@ def carregar_base_conhecimento():
         print(f"Erro ao carregar os arquivos de dados: {e}")
         return {}, [], [], []
 
+
 def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
     """Estrutura os dados brutos em um texto limpo para o prompt da IA."""
-    # Garante que puxamos o perfil do cliente (tratando se for lista ou dict)
+    # garante que o perfil do cliente eh puxado (tratando se for lista ou dict)
     p = perfil[0] if isinstance(perfil, list) and len(perfil) > 0 else perfil
-    
+
     contexto = f"""
     === DADOS DO CLIENTE LOGADO ===
     Nome: {p.get('nome', 'Não identificado')}
@@ -49,3 +50,20 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
     Objetivo Principal: {p.get('objetivo_principal', 'Não informado')}
     Patrimônio Total: R$ {p.get('patrimonio_total', 0.0):,.2f}
     Reserva de Emergência Atual: R$ {p.get('reserva_emergencia_atual', 0.0):,.2f}
+    
+    === PRODUTOS FINANCEIROS DISPONÍVEIS NA BASE ===
+    """
+    for prod in produtos:
+        contexto += f"\n- {prod['nome']} ({prod['categoria'].upper()}): Risco {prod['risco']}. Rentabilidade: {prod['rentabilidade']}. Indicado para: {prod['indicado_para']}."
+
+    if transacoes:
+        contexto += "\n\n=== ÚLTIMAS TRANSAÇÕES DO CLIENTE ==="
+        for t in transacoes[:5]:  # pega as últimas 5 para não lotar o prompt
+            contexto += f"\n- {t.get('data', 'N/A')}: {t.get('tipo', 'N/A')} de R$ {t.get('valor', 0.0):,.2f} em {t.get('ativo', 'N/A')}"
+
+    if historico:
+        contexto += "\n\n=== HISTÓRICO DE ATENDIMENTOS ANTERIORES ==="
+        for h in historico[:3]:
+            contexto += f"\n- {h.get('data', 'N/A')} | Tema: {h.get('tema', 'N/A')} | Resumo: {h.get('resumo', 'N/A')}"
+
+    return contexto
