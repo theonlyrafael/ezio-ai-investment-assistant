@@ -8,7 +8,7 @@ client = OpenAI(api_key=OPENAI_API_KEY)
 
 
 def carregar_base_conhecimento():
-    # lê o arquivo JSON com a base de conhecimento
+    """Lê os arquivos de dados da pasta data/ de forma segura."""
     try:
         with open("data/perfil_investidor.json", "r", encoding="utf-8") as f:
             perfil = json.load(f)
@@ -37,3 +37,4 @@ def carregar_base_conhecimento():
         return {}, [], [], []
 
 def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
+    
