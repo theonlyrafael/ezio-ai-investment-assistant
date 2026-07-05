@@ -67,3 +67,5 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
             contexto += f"\n- {h.get('data', 'N/A')} | Tema: {h.get('tema', 'N/A')} | Resumo: {h.get('resumo', 'N/A')}"
 
     return contexto
+
+def responder_com_ezio(pergunta_usuario, historico_conversa_streamlit=[]):
