@@ -69,3 +69,6 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
     return contexto
 
 def responder_com_ezio(pergunta_usuario, historico_conversa_streamlit=[]):
+    """Orquestra a consulta dos dados e realiza a chamada à API da OpenAI."""
+    # 1. Busca os dados reais das planilhas e arquivos locais
+    perfil, produtos, transacoes, historico = carregar_base_conhecimento()
