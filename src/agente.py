@@ -89,3 +89,15 @@ def responder_com_ezio(pergunta_usuario, historico_conversa_streamlit=[]):
     5. Você não é contador. Não forneça conselhos sobre Imposto de Renda ou regras tributárias.
     6. Se não souber algo ou se o produto solicitado não estiver na sua Base de Conhecimento, admita claramente que foge do seu escopo e ofereça as alternativas que você possui disponíveis.
     """
+    
+    # 4. Monta a estrutura de mensagens combinando as regras e os dados injetados
+    messages = [
+        {"role": "system", "content": f"{system_prompt}\n\nBASE DE CONHECIMENTO DISPONÍVEL:\n{contexto_injetado}"}
+    ]
+    
+    # adiciona as mensagens anteriores da tela para manter a memória do chat ativa
+    for msg in historico_conversa_streamlit:
+        messages.append({"role": msg["role"], "content": msg["content"]})
+        
+    # adiciona a nova pergunta que o usuário acabou de fazer
+    messages.append({"role": "user", "content": pergunta_usuario})
