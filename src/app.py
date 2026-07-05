@@ -34,7 +34,6 @@ for message in st.session_state.messages:
 # se o usuário digitar algo e confirmar com Enter, o bloco abaixo eh executado
 if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
 
-
-
-        
-        
+    # A. Exibe a pergunta do usuário na tela e salva na memória
+    st.chat_message("user", avatar="👤").markdown(prompt)
+    st.session_state.messages.append({"role": "user", "content": prompt})
