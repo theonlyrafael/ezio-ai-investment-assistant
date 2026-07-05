@@ -37,4 +37,6 @@ def carregar_base_conhecimento():
         return {}, [], [], []
 
 def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
-    
+    """Estrutura os dados brutos em um texto limpo para o prompt da IA."""
+    # Garante que puxamos o perfil do cliente (tratando se for lista ou dict)
+    p = perfil[0] if isinstance(perfil, list) and len(perfil) > 0 else perfil
