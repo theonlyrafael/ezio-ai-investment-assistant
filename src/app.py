@@ -22,3 +22,10 @@ if "messages" not in st.session_state:
             "content": "Olá! Eu sou o Ezio, o melhor assessor de investimentos que você poderia ter. Como posso ajudá-lo hoje?",
         }
     )
+
+# 4. Renderização do histórico de mensagens na tela
+for message in st.session_state.messages:
+    # aqui defini um avatar diferente para o usuário e para o assistente
+    avatar_icon = "👤" if message["role"] == "user" else "🏦"
+    with st.chat_message(message["role"], avatar=avatar_icon):
+        st.markdown(message["content"])
