@@ -40,3 +40,12 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
     """Estrutura os dados brutos em um texto limpo para o prompt da IA."""
     # Garante que puxamos o perfil do cliente (tratando se for lista ou dict)
     p = perfil[0] if isinstance(perfil, list) and len(perfil) > 0 else perfil
+    
+    contexto = f"""
+    === DADOS DO CLIENTE LOGADO ===
+    Nome: {p.get('nome', 'Não identificado')}
+    Idade: {p.get('idade', 'Não informado')}
+    Perfil de Investidor: {p.get('perfil_investidor', 'Não mapeado')}
+    Objetivo Principal: {p.get('objetivo_principal', 'Não informado')}
+    Patrimônio Total: R$ {p.get('patrimonio_total', 0.0):,.2f}
+    Reserva de Emergência Atual: R$ {p.get('reserva_emergencia_atual', 0.0):,.2f}
