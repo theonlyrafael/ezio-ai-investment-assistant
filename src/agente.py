@@ -68,13 +68,16 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
 
     return contexto
 
+
 def responder_com_ezio(pergunta_usuario, historico_conversa_streamlit=[]):
     """Orquestra a consulta dos dados e realiza a chamada à API da OpenAI."""
     # 1. Busca os dados reais das planilhas e arquivos locais
     perfil, produtos, transacoes, historico = carregar_base_conhecimento()
-    
+
     # 2. Transforma esses dados no bloco de texto que o Ezio vai ler
-    contexto_injetado = montar_contexto_dinamico(perfil, produtos, transacoes, historico)
+    contexto_injetado = montar_contexto_dinamico(
+        perfil, produtos, transacoes, historico
+    )
 
     # 3. Trazendo o System Prompt consolidado da Etapa 3
     system_prompt = """
@@ -89,15 +92,29 @@ def responder_com_ezio(pergunta_usuario, historico_conversa_streamlit=[]):
     5. Você não é contador. Não forneça conselhos sobre Imposto de Renda ou regras tributárias.
     6. Se não souber algo ou se o produto solicitado não estiver na sua Base de Conhecimento, admita claramente que foge do seu escopo e ofereça as alternativas que você possui disponíveis.
     """
-    
+
     # 4. Monta a estrutura de mensagens combinando as regras e os dados injetados
     messages = [
-        {"role": "system", "content": f"{system_prompt}\n\nBASE DE CONHECIMENTO DISPONÍVEL:\n{contexto_injetado}"}
+        {
+            "role": "system",
+            "content": f"{system_prompt}\n\nBASE DE CONHECIMENTO DISPONÍVEL:\n{contexto_injetado}",
+        }
     ]
-    
+
     # adiciona as mensagens anteriores da tela para manter a memória do chat ativa
     for msg in historico_conversa_streamlit:
         messages.append({"role": msg["role"], "content": msg["content"]})
-        
+
     # adiciona a nova pergunta que o usuário acabou de fazer
     messages.append({"role": "user", "content": pergunta_usuario})
+
+    # 5. Dispara para a OpenAI
+    try:
+        response = client.chat.completions.create(
+            model="gpt-4o-mini",
+            messages=messages,
+            temperature=0.6,  # aqui coloquei como a média de 1.0 para que o modelo seja mais criativo, mas ainda assim consistente com os dados da base
+        )
+        return response.choices[0].message.content
+    except Exception as e:
+        return f"Eita, deu um pequeno problema técnico aqui para eu me conectar. Detalhe do erro: {e}"
