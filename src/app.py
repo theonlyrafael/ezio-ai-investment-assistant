@@ -37,3 +37,6 @@ if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
     # A. Exibe a pergunta do usuário na tela e salva na memória
     st.chat_message("user", avatar="👤").markdown(prompt)
     st.session_state.messages.append({"role": "user", "content": prompt})
+    
+    # B. Mostra um indicador visual de carregamento enquanto o Ezio "pensa"
+    with st.spinner("Analisando seu perfil e o mercado..."):
