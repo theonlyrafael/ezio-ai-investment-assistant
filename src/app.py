@@ -12,3 +12,13 @@ st.markdown(
     "Seu assessor financeiro inteligente. Pergunte sobre investimentos, rentabilidade ou dicas para sua carteira!"
 )
 st.divider()
+
+# 3. Inicialização do Session State para armazenar o histórico de conversas
+if "messages" not in st.session_state:
+    st.session_state.messages = []
+    st.session_state.messages.append(
+        {
+            "role": "assistant",
+            "content": "Olá! Eu sou o Ezio, o melhor assessor de investimentos que você poderia ter. Como posso ajudá-lo hoje?",
+        }
+    )
