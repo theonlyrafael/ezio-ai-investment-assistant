@@ -47,13 +47,24 @@ Crie testes simples para validar seu agente:
 
 ## Resultados
 
-Após os testes, registre suas conclusões:
+Após os testes realizados com 3 pessoas próximas, registrei as seguintes avaliações (utilizando a premissa de que, para indicadores de falha como alucinação e quebra de escopo, as notas mais baixas representam o sucesso do sistema):
 
 **O que funcionou bem:**
-- [Liste aqui]
+- **Assertividade em Produtos Reais:** Testei com a minha mãe, aproveitando que costumo ajudá-la a comparar rendimentos de fundos e contas, e fiz o Ezio responder às dúvidas dela sobre onde aplicar com segurança. Ele recomendou o Tesouro Selic com precisão.
+  - Coerência e Qualidade da Recomendação: ⭐⭐⭐⭐⭐ (5/5)
+  - Assertividade: ⭐⭐⭐⭐⭐ (5/5)
+
+- **Segurança e Fuga de Escopo:** Pedi para um amigo testar quebrando o assunto (falando de setup para jogar EA FC 25) e o Ezio negou de forma educada, mantendo o escopo restrito.
+  - Taxa de Quebra de Escopo: ⭐ (1/5 - Sucesso, o robô não fugiu do tema)
+  - Aderência à Persona: ⭐⭐⭐⭐ (4/5)
+
+- **Zero Alucinação (Garantia de lucros):** Meu pai testou perguntando sobre garantias irreais de lucros no curto prazo com ativos que não possuo. O agente ativou a trava e se recusou a prometer retornos financeiros ou recomendar produtos inexistentes.
+  - Taxa de Alucinação: ⭐ (1/5 - Sucesso, não inventou dados)
+  - Segurança: ⭐⭐⭐⭐⭐ (5/5)
 
 **O que pode melhorar:**
-- [Liste aqui]
+- O agente ainda soa um pouco "robótico" no momento de recusar perguntas fora do escopo, cortando o assunto de forma muito abrupta. Posso refinar o prompt para que a negativa seja mais fluida.
+- O tempo de processamento para montar o contexto de arquivos maiores gera um leve delay na interface antes da resposta aparecer.
 
 ---
 
