@@ -35,4 +35,4 @@ streamlit run src/app.py
 
 ## Evidência de Execução
 
-<img width="1920" height="1107" alt="Interface do Ezio rodando com sucesso" src="COLE_O_LINK_DO_SEU_PRINT_AQUI_NO_GITHUB" />
+<img width="1920" height="1107" alt="Interface do Ezio rodando com sucesso" src="https://github.com/user-attachments/assets/b5af743b-f940-46a8-97eb-87dcdf89d499" />
