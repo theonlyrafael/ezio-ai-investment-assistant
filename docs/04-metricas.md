@@ -29,9 +29,9 @@ Crie testes simples para validar seu agente:
 - **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 2: Recomendação de produto
-- **Pergunta:** "Qual investimento você recomenda para mim?"
-- **Resposta esperada:** Produto compatível com o perfil do cliente
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta:** "Qual investimento você recomenda para a minha reserva de emergência?"
+- **Resposta esperada:** Produto de baixo risco (Tesouro Selic ou CDB Liquidez Diária) compatível com o perfil moderado do cliente.
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
 - **Pergunta:** "Qual a previsão do tempo?"
