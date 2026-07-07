@@ -53,6 +53,8 @@ if prompt := st.chat_input("Digite sua dúvida financeira aqui..."):
 
     # D. Exibe a resposta do Ezio na tela e salva na memória
     with st.chat_message("assistant", avatar="🏦"):
-        st.markdown(resposta_ezio)
+        # substitui "R$" por "R\$" para não bugar o markdown do streamlit
+        resposta_formatada = resposta_ezio.replace("R$", "R\\$")
+        st.markdown(resposta_formatada)
 
-    st.session_state.messages.append({"role": "assistant", "content": resposta_ezio})
+    st.session_state.messages.append({"role": "assistant", "content": resposta_formatada})
