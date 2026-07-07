@@ -68,12 +68,13 @@ Após os testes realizados com 3 pessoas próximas, registrei as seguintes avali
 
 ---
 
-## Métricas Avançadas (Opcional)
+## Métricas Avançadas 
 
-Para quem quer explorar mais, algumas métricas técnicas de observabilidade também podem fazer parte da sua solução, como:
+- **Latência e tempo de resposta:** Para responder as perguntas feitas na interface, Ezio demora entre 1s e 12s, a depender da complexidade do prompt. Para a marca de 1s (ou aproximadamente 1s), Ezio respondeu a um Edge Case (previsão do tempo). Por outro lado, fiz o seguinte questionamento: Oi, tudo bem? Me passa umas dicas de investimentos aí com base no meu perfil. Além disso, explique o porquê escolheu determinado investimento para mim. Dessa forma, Ezio levou cerca de 11s para responder.
 
-- Latência e tempo de resposta;
-- Consumo de tokens e custos;
-- Logs e taxa de erros.
+- **Consumo de tokens e custos:** Para os testes inicias e finais do Ezio, foram gastos 29.095 tokens no total, o que equivale em um gasto de apenas um centavo de dólares ($0,01).
 
-Ferramentas especializadas em LLMs, como [LangWatch](https://langwatch.ai/) e [LangFuse](https://langfuse.com/), são exemplos que podem ajudar nesse monitoramento. Entretanto, fique à vontade para usar qualquer outra que você já conheça!
+- **Logs e taxa de erros:** Duas tentativas me retornaram erros antes da interface ser inicializada:
+- *Error code: 401*: a chave presente no arquivo '.env' (que está oculto pelo .gitignore) estava com a segunda palavra errada (o certo era 'proj' e estava 'project');
+- *KeyError: 0*: no 'agente.py' eu havia definido que os dados do perfil mockado de investidor estavam armazenados como lista, mas na verdade se tratava de um dicionário direto.
+
