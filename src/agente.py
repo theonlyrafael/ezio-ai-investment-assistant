@@ -57,7 +57,7 @@ def montar_contexto_dinamico(perfil, produtos, transacoes, historico):
         contexto += f"\n- {prod['nome']} ({prod['categoria'].upper()}): Risco {prod['risco']}. Rentabilidade: {prod['rentabilidade']}. Indicado para: {prod['indicado_para']}."
 
     if perfil:
-        p = perfil[0]
+        p = perfil
         contexto += f"Perfil: {p.get('perfil_investidor', 'N/A')} | Renda Mensal: R$ {p.get('renda_mensal', 0.0):,.2f}\n"
         contexto += f"Objetivo: {p.get('objetivo_principal', 'N/A')} | Patrimônio: R$ {p.get('patrimonio_total', 0.0):,.2f}\n"
 
