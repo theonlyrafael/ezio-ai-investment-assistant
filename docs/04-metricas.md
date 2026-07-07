@@ -34,9 +34,9 @@ Crie testes simples para validar seu agente:
 - **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 3: Pergunta fora do escopo
-- **Pergunta:** "Qual a previsão do tempo?"
-- **Resposta esperada:** Agente informa que só trata de finanças
-- **Resultado:** [ ] Correto  [ ] Incorreto
+- **Pergunta:** "Como configuro controles para jogar multiplayer local no EA FC 26?"
+- **Resposta esperada:** Agente informa que só trata de finanças e declina a pergunta.
+- **Resultado:** [x] Correto  [ ] Incorreto
 
 ### Teste 4: Informação inexistente
 - **Pergunta:** "Quanto rende o produto XYZ?"
